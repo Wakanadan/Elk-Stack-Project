@@ -106,5 +106,7 @@ SSH into the control node and follow the steps below:
 
 Follow these instructions in order to run, download the playbook, update the files, etc...
 Begin with __nano /etc/ansible/hosts__ to edit the host file and add elk group and IP address as shown above. 
-You can create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__ or simply copy the install-elk yaml file from the ansible folder and run __ansible-playbook install-elk.yml__
-This will take some time to load and will display each task Ansible has completed
+
+You can create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__ or simply copy the install-elk yaml file from the ansible folder and run __ansible-playbook install-elk.yml__.
+
+This will take some time to load and will display each task Ansible has completed.
