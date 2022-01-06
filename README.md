@@ -104,6 +104,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to _http://[your.VM.IP]:5601/app/kibana_ to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-run __nano /etc/ansible/hosts__ to edit the host file and add the specific groups mentioned above
-create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__
+Follow these instructions in order to run, download the playbook, update the files, etc...
+Begin with __nano /etc/ansible/hosts__ to edit the host file and add elk group and IP address as shown above. 
+You can create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__ or simply copy the install-elk yaml file from the ansible folder and run __ansible-playbook install-elk.yml__
+This will take some time to load and will display each task Ansible has completed
