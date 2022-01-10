@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 ![Image of Cloud Security Network](https://github.com/Wakanadan/Elk-Stack-Project/blob/main/Diagrams/Cloud_Security_Network.png "Cloud_Security_Network")
 (Images/Cloud_Security_Network.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __Filebeat-config.yml__ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above or, alternatively, select portions of the __install-elk.yml__ file may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topology
@@ -104,9 +104,17 @@ SSH into the control node and follow the steps below:
 
 - Run the playbook, and navigate to _http://[your.VM.IP]:5601/app/kibana_ to check that the installation worked as expected.
 
-Follow these instructions in order to run, download the playbook, update the files, etc...
-Begin with __nano /etc/ansible/hosts__ to edit the host file and add elk group and IP address as shown above. 
+Once you SSH into the Virtual Machine from the Ansible container, follow these instructions in order to run, download the playbook, update the files, etc...
+Run __nano /etc/ansible/hosts__ to edit the host file and add elk group, specify python3 and add IP address as shown above. 
 
-You can create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__ or simply copy the install-elk yaml file from the ansible folder and run __ansible-playbook install-elk.yml__.
+Create a YAML playbook file by running __touch /etc/ansible/install-elk.yml__ or simply run __curl https://github.com/Wakanadan/Elk-Stack-Project/blob/main/Ansible/install-elk.yml__ to copy the install-elk yaml file. 
+Ensure the task for vm.max_map_count is set to to 262144 so that it can use more memory.
+Ensure to include tasks to install docker.io, docker, and python3-pip.
+Ensure to list the ports elk will run on:
+5601:5601
+9200:9200
+5044:5044
+
+Finally run the command __ansible-playbook install-elk.yml__ .
 
 This will take some time to load and will display each task Ansible has completed.
