@@ -117,4 +117,5 @@ Ensure to list the ports elk will run on:
 
 Finally run the command __ansible-playbook install-elk.yml__ .
 
-This will take some time to load and will display each task Ansible has completed.
+This will take some time to load and will display each task Ansible has completed. Check http://[your.VM.IP]:5601/app/kibana to see that your webpage looks similar to this:
+![Image of Kibana](https://github.com/Wakanadan/Elk-Stack-Project/blob/main/Images/ScreenshotKibana.png)
