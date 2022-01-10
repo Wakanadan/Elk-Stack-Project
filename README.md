@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 ![Image of Cloud Security Network](https://github.com/Wakanadan/Elk-Stack-Project/blob/main/Diagrams/Cloud_Security_Network.png "Cloud_Security_Network")
 (Images/Cloud_Security_Network.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above or, alternatively, select portions of the __install-elk.yml__ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above or, alternatively, select portions of the __filebeat-playbook.yml__ file may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topology
